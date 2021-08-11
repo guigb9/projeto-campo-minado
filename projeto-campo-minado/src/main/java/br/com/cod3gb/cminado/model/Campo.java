@@ -11,8 +11,8 @@ public class Campo {
     private final int coluna;
 
     private boolean aberto;
-    private boolean minado;
-    private boolean marcado;
+    private boolean minado = false;
+    private boolean marcado = false;
 
 
     private List<Campo> vizinhos;
@@ -104,6 +104,8 @@ public class Campo {
         marcado = false;
     }
 
+
+
     public boolean isMinado(){
         return minado;
     }
@@ -123,5 +125,7 @@ public class Campo {
         }
     }
 
-
+    public void setAberto(boolean aberto) {
+        this.aberto = aberto;
+    }
 }
